@@ -1,0 +1,6 @@
+{
+    "name": "Pop Shop Details",
+    "description": "Adds a Show Details item to applications if Pop Shop is installed",
+    "uuid": "pop-shop-details@system76.com",
+    "shell-version": ["3.26.1"]
+}

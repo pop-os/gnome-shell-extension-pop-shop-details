@@ -1,0 +1,13 @@
+Source: gnome-shell-extension-pop-shop-details
+Section: gnome
+Priority: optional
+Maintainer: Jeremy Soller <jeremy@system76.com>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 3.9.8
+Homepage: https://github.com/system76/gnome-shell-extension-pop-shop-details
+Vcs-Git: https://github.com/system76/gnome-shell-extension-pop-shop-details.git
+
+Package: gnome-shell-extension-pop-shop-details
+Architecture: all
+Depends: gnome-shell (>= 3.26.1), ${misc:Depends}
+Description: Gnome-shell extension to add a Show Details item to applications when Pop Shop is installed

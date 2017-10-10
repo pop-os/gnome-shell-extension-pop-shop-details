@@ -1,0 +1,7 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gnome-shell-extension-pop-shop-details
+Source: https://github.com/system76/gnome-shell-extension-pop-shop-details
+
+Files: *
+Copyright: 2017 System76
+License: MIT
