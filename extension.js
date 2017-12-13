@@ -15,12 +15,12 @@ function enable() {
         let ret = old.apply(this, arguments);
 
         if (!this._source.app.is_window_backed()) {
-            if (Shell.AppSystem.get_default().lookup_app('org.pop.shop.desktop')) {
+            if (Shell.AppSystem.get_default().lookup_app('io.elementary.appcenter.desktop')) {
                 this._appendSeparator();
                 let item = this._appendMenuItem("Show Details");
                 item.connect('activate', Lang.bind(this, function() {
                     let id = this._source.app.get_id();
-                    Util.trySpawn(["org.pop.shop", "appstream://" + id]);
+                    Util.trySpawn(["io.elementary.appcenter", "appstream://" + id]);
                     Main.overview.hide();
                 }));
             }
