@@ -1,5 +1,4 @@
 const AppDisplay = imports.ui.appDisplay;
-const Lang = imports.lang;
 const Main = imports.ui.main;
 const Shell = imports.gi.Shell;
 const Util = imports.misc.util;
@@ -18,11 +17,11 @@ function enable() {
             if (Shell.AppSystem.get_default().lookup_app('io.elementary.appcenter.desktop')) {
                 this._appendSeparator();
                 let item = this._appendMenuItem("Show Details");
-                item.connect('activate', Lang.bind(this, function() {
+                item.connect('activate', () => {
                     let id = this._source.app.get_id();
                     Util.trySpawn(["io.elementary.appcenter", "appstream://" + id]);
                     Main.overview.hide();
-                }));
+                });
             }
         }
 
