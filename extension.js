@@ -3,14 +3,15 @@ const Main = imports.ui.main;
 const Shell = imports.gi.Shell;
 const Util = imports.misc.util;
 
+let displayFunc = !!AppDisplay.AppIconMenu.prototype._rebuildMenu ? '_rebuildMenu' : '_redisplay';
 let old;
 
 function init() {}
 
 function enable() {
-    old = AppDisplay.AppIconMenu.prototype._redisplay;
+    old = AppDisplay.AppIconMenu.prototype[displayFunc];
 
-    AppDisplay.AppIconMenu.prototype._redisplay = function() {
+    AppDisplay.AppIconMenu.prototype[displayFunc] = function() {
         let ret = old.apply(this, arguments);
 
         if (!this._source.app.is_window_backed()) {
@@ -30,5 +31,5 @@ function enable() {
 }
 
 function disable() {
-    AppDisplay.AppIconMenu.prototype._redisplay = old;
+    AppDisplay.AppIconMenu.prototype[displayFunc] = old;
 }
