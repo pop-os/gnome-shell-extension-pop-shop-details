@@ -17,7 +17,7 @@ function enable() {
         if (!this._source.app.is_window_backed()) {
             if (Shell.AppSystem.get_default().lookup_app('io.elementary.appcenter.desktop')) {
                 this._appendSeparator();
-                let item = this._appendMenuItem("Show Details");
+                let item = this._appendMenuItem(_("Show Details"));
                 item.connect('activate', () => {
                     let id = this._source.app.get_id();
                     Util.trySpawn(["io.elementary.appcenter", "appstream://" + id]);
