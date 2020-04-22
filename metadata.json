@@ -2,5 +2,6 @@
     "name": "Pop Shop Details",
     "description": "Adds a Show Details item to applications if Pop Shop is installed",
     "uuid": "pop-shop-details@system76.com",
-    "shell-version": ["3.26.1"]
+    "shell-version": ["3.26.1"],
+    "url": "https://github.com/pop-os/gnome-shell-extension-pop-shop-details"
 }
